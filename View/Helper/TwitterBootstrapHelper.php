@@ -8,6 +8,14 @@ class TwitterBootstrapHelper extends AppHelper {
 		"TwitterBootstrap.BootstrapForm"
 	);
 
+	public function create_form($model = null, $options = array()) {
+		return $this->BootstrapForm->create($model, $options);
+	}
+
+	public function end_form($options = null) {
+		return $this->BootstrapForm->end($options);
+	}
+
 	public function basic_input($field, $options = array()) {
 		return $this->BootstrapForm->basicInput($field, $options);
 	}
