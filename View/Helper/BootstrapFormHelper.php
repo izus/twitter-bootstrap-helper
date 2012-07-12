@@ -61,6 +61,12 @@ class BootstrapFormHelper extends FormHelper {
 			"prepend" => false,
 			"state" => false
 		);
+		$modelKey = $this->model();
+		$primaryKey = $this->fieldset[$modelKey]['key'];
+		if($field == $primaryKey) {
+			$defaults['type'] = 'hidden';
+		}
+
 		return array_merge($defaults, $options);
 	}
 
