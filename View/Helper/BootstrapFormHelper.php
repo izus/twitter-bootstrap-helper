@@ -216,7 +216,7 @@ class BootstrapFormHelper extends FormHelper {
 		} else {
 			$options["field"] = "{$model}.{$options["field"]}";
 		}*/
-		if ($options['label'] === false) {
+		if ($options['label'] === false || $options['type'] == 'hidden') {
 			$options['label'] = '';
 		} else if (!empty($options['label'])) {
 			$options['label'] = $this->label(
