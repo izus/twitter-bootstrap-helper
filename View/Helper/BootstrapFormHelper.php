@@ -208,6 +208,9 @@ class BootstrapFormHelper extends FormHelper {
 	 * @return string
 	 */
 	public function input($field, $options = array()) {
+		if(isset($options['plugin']) && !$options['plugin']) {
+			return parent::input($field, $options);
+		}
 		$options = $this->_parseInputOptions($field, $options);
 		if (!isset($options['field'])) { return ''; }
 		$out = $help_inline = $help_block = '';
