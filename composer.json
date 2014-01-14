@@ -1,0 +1,8 @@
+{
+        "name": "izus/TwitterBootstrap",
+        "description": "CakePHP helper for rendering bootstrap appropriate markup. Uses the Twitter Bootstrap 2.0.",
+        "type": "cakephp-plugin",
+        "require": {
+                "php": ">=5.3.0"
+        }
+}
